@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for EruTextValidation.
+// Project version number for EruTextValidation.
 FOUNDATION_EXPORT double EruTextValidationVersionNumber;
 
-//! Project version string for EruTextValidation.
+// Project version string for EruTextValidation.
 FOUNDATION_EXPORT const unsigned char EruTextValidationVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <EruTextValidation/PublicHeader.h>
+// Classes
+#import <EruTextValidation/Classes/RUITextValidationRule.h>
+#import <EruTextValidation/Classes/RUITextValidationRuleCollection.h>
+#import <EruTextValidation/Classes/RUITextValidator.h>
+#import <EruTextValidation/Classes/RUIFormValidator.h>
 
-
+// Categories
+#import <EruTextValidation/Categories/NSString+RUIValidation.h>
+#import <EruTextValidation/Categories/UITextField+RUIValidation.h>
+#import <EruTextValidation/Categories/UITextView+RUIValidation.h>
