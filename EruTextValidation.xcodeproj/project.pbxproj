@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		62AB482B1A9CC38200BA4F8B /* EruTextValidationBuilder */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 62AB482E1A9CC38200BA4F8B /* Build configuration list for PBXAggregateTarget "EruTextValidationBuilder" */;
+			buildPhases = (
+				62AB482F1A9CC3B700BA4F8B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = EruTextValidationBuilder;
+			productName = EruTextValidationBuilder;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		62CBBCDE1A9B876E005D47DF /* NSString+RUIValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD01A9B876E005D47DF /* NSString+RUIValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62CBBCDF1A9B876E005D47DF /* NSString+RUIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD11A9B876E005D47DF /* NSString+RUIValidation.m */; };
@@ -226,6 +240,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Eru;
 				TargetAttributes = {
+					62AB482B1A9CC38200BA4F8B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					62D87A751A915A23003FE64F = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -248,6 +265,7 @@
 			targets = (
 				62D87A751A915A23003FE64F /* EruTextValidation */,
 				62D87A801A915A23003FE64F /* EruTextValidationTests */,
+				62AB482B1A9CC38200BA4F8B /* EruTextValidationBuilder */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +286,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62AB482F1A9CC3B700BA4F8B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules (from iphonesimulator build) to the copied framework directory\n# Uncomment below for Swift modules.\n# cp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/Framework.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/Framework.swiftmodule\"\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62D87A711A915A23003FE64F /* Sources */ = {
@@ -303,6 +337,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		62AB482C1A9CC38200BA4F8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		62AB482D1A9CC38200BA4F8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		62D87A8A1A915A23003FE64F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,6 +444,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EruTextValidation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -411,6 +460,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EruTextValidation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -450,6 +500,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		62AB482E1A9CC38200BA4F8B /* Build configuration list for PBXAggregateTarget "EruTextValidationBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62AB482C1A9CC38200BA4F8B /* Debug */,
+				62AB482D1A9CC38200BA4F8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		62D87A701A915A23003FE64F /* Build configuration list for PBXProject "EruTextValidation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

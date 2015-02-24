@@ -1,0 +1,6 @@
+framework module EruTextValidation {
+  umbrella header "EruTextValidation.h"
+
+  export *
+  module * { export * }
+}
