@@ -83,4 +83,9 @@
  */
 - (BOOL)rtv_matchesCharacterSet:(NSCharacterSet *)characterSet;
 
+/**
+ @return YES if string is a valid email address.
+ */
+- (BOOL)rtv_isValidEmail;
+
 @end

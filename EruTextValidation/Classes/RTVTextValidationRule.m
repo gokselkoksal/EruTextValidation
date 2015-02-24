@@ -95,4 +95,11 @@
     }];
 }
 
++ (instancetype)ruleForEmail
+{
+    return [[self alloc] initWithBlock:^BOOL(NSString *string) {
+        return [string rtv_isValidEmail];
+    }]
+}
+
 @end
