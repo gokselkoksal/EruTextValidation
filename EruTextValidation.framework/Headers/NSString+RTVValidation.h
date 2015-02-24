@@ -1,6 +1,6 @@
 //
-//  NSString+RUIValidation.h
-//  EruUIKit
+//  NSString+RTVValidation.h
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 08/11/14.
 //  Copyright (c) 2014 Eru. All rights reserved.
@@ -11,76 +11,76 @@
 /**
  Category on NSString for additional validation methods.
  */
-@interface NSString (RUIValidation)
+@interface NSString (RTVValidation)
 
 /**
  Decimal separator used for validations.
  */
-+ (NSString *)rui_decimalSeparator;
++ (NSString *)rtv_decimalSeparator;
 
 /**
  Sets decimal separator to be used in validations.
  @param decimalSeparator Decimal separator to set.
  */
-+ (void)rui_setDecimalSeparator:(NSString *)decimalSeparator;
++ (void)rtv_setDecimalSeparator:(NSString *)decimalSeparator;
 
 /**
  @return YES if string is an unsigned integer.
  */
-- (BOOL)rui_isUnsignedInteger;
+- (BOOL)rtv_isUnsignedInteger;
 
 /**
  @return YES if string is an integer.
  */
-- (BOOL)rui_isInteger;
+- (BOOL)rtv_isInteger;
 
 /**
  @return YES if string is an unsigned integer.
  */
-- (BOOL)rui_isUnsignedFloat;
+- (BOOL)rtv_isUnsignedFloat;
 
 /**
  @return YES if string is a floating point number.
  */
-- (BOOL)rui_isFloat;
+- (BOOL)rtv_isFloat;
 
 /**
  @return YES if string is numeric.
  */
-- (BOOL)rui_isNumeric;
+- (BOOL)rtv_isNumeric;
 
 /**
  @return YES if string is an unsigned floating point number.
  */
-- (BOOL)rui_isLetters;
+- (BOOL)rtv_isLetters;
 
 /**
  @return YES if string is alphanumeric.
  */
-- (BOOL)rui_isAlphanumeric;
+- (BOOL)rtv_isAlphanumeric;
 
 /**
  @return YES if string is empty.
  */
-- (BOOL)rui_isEmpty;
+- (BOOL)rtv_isEmpty;
 
 /**
  @return YES if string as a WHOLE matches given regex.
  @param regex Regular expression to match.
  */
-- (BOOL)rui_matchesRegex:(NSRegularExpression *)regex;
+- (BOOL)rtv_matchesRegex:(NSRegularExpression *)regex;
 
 /**
  @return YES if string as a WHOLE matches given regex pattern. If pattern is invalid, method returns NO.
  @param regexPattern Regular expression pattern to match.
  @note NSRegularExpression will be created with NSRegularExpressionCaseInsensitive option.
  */
-- (BOOL)rui_matchesRegexPattern:(NSString *)regexPattern;
+- (BOOL)rtv_matchesRegexPattern:(NSString *)regexPattern;
 
 /**
  @return YES if string as a WHOLE matches the given character set.
  @param characterSet Character set to match.
  */
-- (BOOL)rui_matchesCharacterSet:(NSCharacterSet *)characterSet;
+- (BOOL)rtv_matchesCharacterSet:(NSCharacterSet *)characterSet;
 
 @end

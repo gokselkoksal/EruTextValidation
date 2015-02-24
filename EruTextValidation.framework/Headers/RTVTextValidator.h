@@ -1,40 +1,40 @@
 //
-//  RUITextValidator.h
-//  EruUIKit
+//  RTVTextValidator.h
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 16/02/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
 //
 
-#import "RUITextValidationRule.h"
-#import "RUITextValidationRuleCollection.h"
+#import "RTVTextValidationRule.h"
+#import "RTVTextValidationRuleCollection.h"
 
-@protocol RUITextValidatorDelegate;
+@protocol RTVTextValidatorDelegate;
 
 /**
  Text validator to use in fields.
  */
-@interface RUITextValidator : NSObject <UITextFieldDelegate, UITextViewDelegate>
+@interface RTVTextValidator : NSObject <UITextFieldDelegate, UITextViewDelegate>
 
 /**
  Delegate object for validator.
  */
-@property (weak, nonatomic) id<RUITextValidatorDelegate> delegate;
+@property (weak, nonatomic) id<RTVTextValidatorDelegate> delegate;
 
 /**
  Rule collection to be used when validating input to a field.
  */
-@property (strong, nonatomic, readonly) RUITextValidationRuleCollection *inputRules;
+@property (strong, nonatomic, readonly) RTVTextValidationRuleCollection *inputRules;
 
 /**
  Rule collection to be used when validating a field before submit.
  */
-@property (strong, nonatomic, readonly) RUITextValidationRuleCollection *submitRules;
+@property (strong, nonatomic, readonly) RTVTextValidationRuleCollection *submitRules;
 
 /**
  Failed submit rule, if any.
  */
-@property (strong, nonatomic, readonly) RUITextValidationRule *failedSubmitRule;
+@property (strong, nonatomic, readonly) RTVTextValidationRule *failedSubmitRule;
 
 /**
  Submit state of this validator. Should not be submitted to server if this property is NO.
@@ -46,13 +46,13 @@
 /**
  This protocol should be adopted by an object which needs notifications about text validators.
  */
-@protocol RUITextValidatorDelegate <NSObject>
+@protocol RTVTextValidatorDelegate <NSObject>
 
 /**
  Gets called upon readyToSubmit state changes.
  @param textValidator Text validator who is responsible for this action.
  @param readyToSubmit Current readyToSubmit state.
  */
-- (void)textValidator:(RUITextValidator *)textValidator isReadyToSubmit:(BOOL)readyToSubmit;
+- (void)textValidator:(RTVTextValidator *)textValidator isReadyToSubmit:(BOOL)readyToSubmit;
 
 @end

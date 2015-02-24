@@ -1,27 +1,27 @@
 //
-//  RUITextFieldValidator.m
-//  EruUIKit
+//  RTVTextFieldValidator.m
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 07/11/14.
 //  Copyright (c) 2014 Eru. All rights reserved.
 //
 
-#import "RUITextValidationRule.h"
-#import "NSString+RUIValidation.h"
+#import "RTVTextValidationRule.h"
+#import "NSString+RTVValidation.h"
 
-#pragma mark - RUITextValidatorRule
+#pragma mark - RTVTextValidatorRule
 
-@implementation RUITextValidationRule
+@implementation RTVTextValidationRule
 
 @synthesize validationBlock = _validationBlock;
 @synthesize errorMessage = _errorMessage;
 
-- (instancetype)initWithBlock:(RUITextValidationBlock)block
+- (instancetype)initWithBlock:(RTVTextValidationBlock)block
 {
     return [self initWithBlock:block errorMessage:nil];
 }
 
-- (instancetype)initWithBlock:(RUITextValidationBlock)block errorMessage:(NSString *)errorMessage
+- (instancetype)initWithBlock:(RTVTextValidationBlock)block errorMessage:(NSString *)errorMessage
 {
     self = [super init];
     
@@ -41,35 +41,35 @@
 
 @end
 
-#pragma mark - RUITextValidationRule+RUIFactory
+#pragma mark - RTVTextValidationRule+RTVFactory
 
-@implementation RUITextValidationRule (RUIFactory)
+@implementation RTVTextValidationRule (RTVFactory)
 
 + (instancetype)ruleForIntegerOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rui_isInteger];
+        return [string rtv_isInteger];
     }];
 }
 
 + (instancetype)ruleForNumericOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rui_isNumeric];
+        return [string rtv_isNumeric];
     }];
 }
 
 + (instancetype)ruleForAlphanumericOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rui_isAlphanumeric];
+        return [string rtv_isAlphanumeric];
     }];
 }
 
 + (instancetype)ruleForLettersOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rui_isLetters];
+        return [string rtv_isLetters];
     }];
 }
 

@@ -1,27 +1,27 @@
 //
 //  WLTTextFieldValidator.h
-//  EruUIKit
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 07/11/14.
 //  Copyright (c) 2014 Eru. All rights reserved.
 //
 
-#import "NSString+RUIValidation.h"
+#import "NSString+RTVValidation.h"
 
 /**
  Validation block to be used when validating text.
  */
-typedef BOOL(^RUITextValidationBlock)(NSString *string);
+typedef BOOL(^RTVTextValidationBlock)(NSString *string);
 
 /**
  Protocol to be adopted when defining text validation rules.
  */
-@protocol RUITextValidationRule <NSObject>
+@protocol RTVTextValidationRule <NSObject>
 
 /**
  Validation block to be used when validating text.
  */
-@property (copy, nonatomic, readonly) RUITextValidationBlock validationBlock;
+@property (copy, nonatomic, readonly) RTVTextValidationBlock validationBlock;
 
 /**
  Error message to be displayed when validation fails for this rule.
@@ -40,20 +40,20 @@ typedef BOOL(^RUITextValidationBlock)(NSString *string);
 /**
  Wrapper for a text validation rule.
  */
-@interface RUITextValidationRule : NSObject <RUITextValidationRule>
+@interface RTVTextValidationRule : NSObject <RTVTextValidationRule>
 
 /**
  @return an instance of this class.
  @param block Validation block to be used when validating text.
  */
-- (instancetype)initWithBlock:(RUITextValidationBlock)block;
+- (instancetype)initWithBlock:(RTVTextValidationBlock)block;
 
 /**
  @return an instance of this class.
  @param block Validation block to be used when validating text.
  @param errorMessage Error message to be displayed upon failure.
  */
-- (instancetype)initWithBlock:(RUITextValidationBlock)block
+- (instancetype)initWithBlock:(RTVTextValidationBlock)block
                  errorMessage:(NSString *)errorMessage;
 
 @end
@@ -61,7 +61,7 @@ typedef BOOL(^RUITextValidationBlock)(NSString *string);
 /**
  Category for commonly used validation rules.
  */
-@interface RUITextValidationRule (RUIFactory)
+@interface RTVTextValidationRule (RTVFactory)
 
 /**
  @return rule to accept only integers. (e.g 1000, 23423)

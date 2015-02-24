@@ -15,12 +15,12 @@ FOUNDATION_EXPORT double EruTextValidationVersionNumber;
 FOUNDATION_EXPORT const unsigned char EruTextValidationVersionString[];
 
 // Classes
-#import <EruTextValidation/Classes/RUITextValidationRule.h>
-#import <EruTextValidation/Classes/RUITextValidationRuleCollection.h>
-#import <EruTextValidation/Classes/RUITextValidator.h>
-#import <EruTextValidation/Classes/RUIFormValidator.h>
+#import <EruTextValidation/RTVTextValidationRule.h>
+#import <EruTextValidation/RTVTextValidationRuleCollection.h>
+#import <EruTextValidation/RTVTextValidator.h>
+#import <EruTextValidation/RTVFormValidator.h>
 
 // Categories
-#import <EruTextValidation/Categories/NSString+RUIValidation.h>
-#import <EruTextValidation/Categories/UITextField+RUIValidation.h>
-#import <EruTextValidation/Categories/UITextView+RUIValidation.h>
+#import <EruTextValidation/NSString+RTVValidation.h>
+#import <EruTextValidation/UITextField+RTVValidation.h>
+#import <EruTextValidation/UITextView+RTVValidation.h>

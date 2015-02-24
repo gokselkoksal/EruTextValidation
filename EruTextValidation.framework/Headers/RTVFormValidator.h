@@ -1,6 +1,6 @@
 //
-//  RUIValidator.h
-//  EruUIKit
+//  RTVFormValidator.h
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 01/01/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol RUIFormValidatorDelegate;
+@protocol RTVFormValidatorDelegate;
 
 /**
- A form validator class that uses dependent RUITextValidator objects and determines a overall readyToSubmit state.
+ A form validator class that uses dependent RTVTextValidator objects and determines a overall readyToSubmit state.
  */
-@interface RUIFormValidator : NSObject <UITextFieldDelegate, UITextViewDelegate>
+@interface RTVFormValidator : NSObject <UITextFieldDelegate, UITextViewDelegate>
 
 /**
  Delegate of form validator. Most likely your view controller.
  */
-@property (weak, nonatomic) id<RUIFormValidatorDelegate> delegate;
+@property (weak, nonatomic) id<RTVFormValidatorDelegate> delegate;
 
 /**
  Text validators used by form validator.
@@ -27,7 +27,7 @@
 
 /**
  @return an instance with given validators.
- @param textValidators Array of validators. (of type RUITextValidator)
+ @param textValidators Array of validators. (of type RTVTextValidator)
  */
 - (instancetype)initWithTextValidators:(NSArray *)textValidators;
 
@@ -41,7 +41,7 @@
 /**
  This protocol should be adapted by a controller that needs notifications about readyToSubmit state of this validator.
  */
-@protocol RUIFormValidatorDelegate <NSObject>
+@protocol RTVFormValidatorDelegate <NSObject>
 
 @optional
 
@@ -50,6 +50,6 @@
  @param formValidator Form validator object firing this notification.
  @param readyToSubmit readyToSubmit state of this form validator.
  */
-- (void)formValidator:(RUIFormValidator *)formValidator isReadyToSubmit:(BOOL)readyToSubmit;
+- (void)formValidator:(RTVFormValidator *)formValidator isReadyToSubmit:(BOOL)readyToSubmit;
 
 @end

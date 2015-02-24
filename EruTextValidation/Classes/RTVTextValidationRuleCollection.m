@@ -1,22 +1,22 @@
 //
-//  RUITextValidationRuleCollection.m
-//  EruUIKit
+//  RTVTextValidationRuleCollection.m
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 31/01/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
 //
 
-#import "RUITextValidationRuleCollection.h"
+#import "RTVTextValidationRuleCollection.h"
 
-#pragma mark - RUITextValidationRuleCollection
+#pragma mark - RTVTextValidationRuleCollection
 
-@interface RUITextValidationRuleCollection ()
+@interface RTVTextValidationRuleCollection ()
 
 @property (strong, nonatomic, readwrite) NSMutableArray *validationRules;
 
 @end
 
-@implementation RUITextValidationRuleCollection
+@implementation RTVTextValidationRuleCollection
 
 - (instancetype)initWithRules:(NSArray *)rules
 {
@@ -40,7 +40,7 @@
     return _validationRules;
 }
 
-- (void)addRule:(id<RUITextValidationRule>)rule
+- (void)addRule:(id<RTVTextValidationRule>)rule
 {
     [self.validationRules addObject:rule];
 }
@@ -49,14 +49,14 @@
 {
     [rules enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         
-        if ([object conformsToProtocol:@protocol(RUITextValidationRule)])
+        if ([object conformsToProtocol:@protocol(RTVTextValidationRule)])
         {
             [self.validationRules addObject:object];
         }
     }];
 }
 
-- (void)removeRule:(id<RUITextValidationRule>)rule
+- (void)removeRule:(id<RTVTextValidationRule>)rule
 {
     [self.validationRules removeObject:rule];
 }
@@ -76,7 +76,7 @@
     return [self.validationRules copy];
 }
 
-- (id<RUITextValidationRule>)ruleAtIndex:(NSUInteger)index
+- (id<RTVTextValidationRule>)ruleAtIndex:(NSUInteger)index
 {
     if (index < [self.validationRules count])
     {
@@ -93,11 +93,11 @@
     return [self validateText:text failedRule:nil];
 }
 
-- (BOOL)validateText:(NSString *)text failedRule:(out __autoreleasing id<RUITextValidationRule> *)failedRule
+- (BOOL)validateText:(NSString *)text failedRule:(out __autoreleasing id<RTVTextValidationRule> *)failedRule
 {
     __block BOOL succeeded = YES;
     
-    [self.validationRules enumerateObjectsUsingBlock:^(id<RUITextValidationRule> rule, NSUInteger idx, BOOL *stop) {
+    [self.validationRules enumerateObjectsUsingBlock:^(id<RTVTextValidationRule> rule, NSUInteger idx, BOOL *stop) {
         
         if (![rule validateText:text])
         {

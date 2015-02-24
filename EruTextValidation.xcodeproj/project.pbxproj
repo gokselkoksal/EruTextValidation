@@ -21,20 +21,20 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		62CBBCDE1A9B876E005D47DF /* NSString+RUIValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD01A9B876E005D47DF /* NSString+RUIValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCDF1A9B876E005D47DF /* NSString+RUIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD11A9B876E005D47DF /* NSString+RUIValidation.m */; };
-		62CBBCE01A9B876E005D47DF /* RUIFormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD21A9B876E005D47DF /* RUIFormValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCE11A9B876E005D47DF /* RUIFormValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD31A9B876E005D47DF /* RUIFormValidator.m */; };
-		62CBBCE21A9B876E005D47DF /* RUITextValidationRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD41A9B876E005D47DF /* RUITextValidationRule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCE31A9B876E005D47DF /* RUITextValidationRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD51A9B876E005D47DF /* RUITextValidationRule.m */; };
-		62CBBCE41A9B876E005D47DF /* RUITextValidationRuleCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD61A9B876E005D47DF /* RUITextValidationRuleCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCE51A9B876E005D47DF /* RUITextValidationRuleCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD71A9B876E005D47DF /* RUITextValidationRuleCollection.m */; };
-		62CBBCE61A9B876E005D47DF /* RUITextValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD81A9B876E005D47DF /* RUITextValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCE71A9B876E005D47DF /* RUITextValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD91A9B876E005D47DF /* RUITextValidator.m */; };
-		62CBBCE81A9B876E005D47DF /* UITextField+RUIValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCDA1A9B876E005D47DF /* UITextField+RUIValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCE91A9B876E005D47DF /* UITextField+RUIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCDB1A9B876E005D47DF /* UITextField+RUIValidation.m */; };
-		62CBBCEA1A9B876E005D47DF /* UITextView+RUIValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCDC1A9B876E005D47DF /* UITextView+RUIValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62CBBCEB1A9B876E005D47DF /* UITextView+RUIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCDD1A9B876E005D47DF /* UITextView+RUIValidation.m */; };
+		62CBBCDE1A9B876E005D47DF /* NSString+RTVValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD01A9B876E005D47DF /* NSString+RTVValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCDF1A9B876E005D47DF /* NSString+RTVValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD11A9B876E005D47DF /* NSString+RTVValidation.m */; };
+		62CBBCE01A9B876E005D47DF /* RTVFormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD21A9B876E005D47DF /* RTVFormValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCE11A9B876E005D47DF /* RTVFormValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD31A9B876E005D47DF /* RTVFormValidator.m */; };
+		62CBBCE21A9B876E005D47DF /* RTVTextValidationRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD41A9B876E005D47DF /* RTVTextValidationRule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCE31A9B876E005D47DF /* RTVTextValidationRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD51A9B876E005D47DF /* RTVTextValidationRule.m */; };
+		62CBBCE41A9B876E005D47DF /* RTVTextValidationRuleCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD61A9B876E005D47DF /* RTVTextValidationRuleCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCE51A9B876E005D47DF /* RTVTextValidationRuleCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD71A9B876E005D47DF /* RTVTextValidationRuleCollection.m */; };
+		62CBBCE61A9B876E005D47DF /* RTVTextValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD81A9B876E005D47DF /* RTVTextValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCE71A9B876E005D47DF /* RTVTextValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD91A9B876E005D47DF /* RTVTextValidator.m */; };
+		62CBBCE81A9B876E005D47DF /* UITextField+RTVValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCDA1A9B876E005D47DF /* UITextField+RTVValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCE91A9B876E005D47DF /* UITextField+RTVValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCDB1A9B876E005D47DF /* UITextField+RTVValidation.m */; };
+		62CBBCEA1A9B876E005D47DF /* UITextView+RTVValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCDC1A9B876E005D47DF /* UITextView+RTVValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CBBCEB1A9B876E005D47DF /* UITextView+RTVValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCDD1A9B876E005D47DF /* UITextView+RTVValidation.m */; };
 		62D87A7C1A915A23003FE64F /* EruTextValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D87A7B1A915A23003FE64F /* EruTextValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62D87A821A915A23003FE64F /* EruTextValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D87A761A915A23003FE64F /* EruTextValidation.framework */; };
 		62D87A891A915A23003FE64F /* EruTextValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D87A881A915A23003FE64F /* EruTextValidationTests.m */; };
@@ -51,20 +51,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		62CBBCD01A9B876E005D47DF /* NSString+RUIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RUIValidation.h"; sourceTree = "<group>"; };
-		62CBBCD11A9B876E005D47DF /* NSString+RUIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RUIValidation.m"; sourceTree = "<group>"; };
-		62CBBCD21A9B876E005D47DF /* RUIFormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUIFormValidator.h; sourceTree = "<group>"; };
-		62CBBCD31A9B876E005D47DF /* RUIFormValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUIFormValidator.m; sourceTree = "<group>"; };
-		62CBBCD41A9B876E005D47DF /* RUITextValidationRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUITextValidationRule.h; sourceTree = "<group>"; };
-		62CBBCD51A9B876E005D47DF /* RUITextValidationRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUITextValidationRule.m; sourceTree = "<group>"; };
-		62CBBCD61A9B876E005D47DF /* RUITextValidationRuleCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUITextValidationRuleCollection.h; sourceTree = "<group>"; };
-		62CBBCD71A9B876E005D47DF /* RUITextValidationRuleCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUITextValidationRuleCollection.m; sourceTree = "<group>"; };
-		62CBBCD81A9B876E005D47DF /* RUITextValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUITextValidator.h; sourceTree = "<group>"; };
-		62CBBCD91A9B876E005D47DF /* RUITextValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUITextValidator.m; sourceTree = "<group>"; };
-		62CBBCDA1A9B876E005D47DF /* UITextField+RUIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+RUIValidation.h"; sourceTree = "<group>"; };
-		62CBBCDB1A9B876E005D47DF /* UITextField+RUIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RUIValidation.m"; sourceTree = "<group>"; };
-		62CBBCDC1A9B876E005D47DF /* UITextView+RUIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+RUIValidation.h"; sourceTree = "<group>"; };
-		62CBBCDD1A9B876E005D47DF /* UITextView+RUIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+RUIValidation.m"; sourceTree = "<group>"; };
+		62CBBCD01A9B876E005D47DF /* NSString+RTVValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RTVValidation.h"; sourceTree = "<group>"; };
+		62CBBCD11A9B876E005D47DF /* NSString+RTVValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RTVValidation.m"; sourceTree = "<group>"; };
+		62CBBCD21A9B876E005D47DF /* RTVFormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVFormValidator.h; sourceTree = "<group>"; };
+		62CBBCD31A9B876E005D47DF /* RTVFormValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVFormValidator.m; sourceTree = "<group>"; };
+		62CBBCD41A9B876E005D47DF /* RTVTextValidationRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVTextValidationRule.h; sourceTree = "<group>"; };
+		62CBBCD51A9B876E005D47DF /* RTVTextValidationRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVTextValidationRule.m; sourceTree = "<group>"; };
+		62CBBCD61A9B876E005D47DF /* RTVTextValidationRuleCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVTextValidationRuleCollection.h; sourceTree = "<group>"; };
+		62CBBCD71A9B876E005D47DF /* RTVTextValidationRuleCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVTextValidationRuleCollection.m; sourceTree = "<group>"; };
+		62CBBCD81A9B876E005D47DF /* RTVTextValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVTextValidator.h; sourceTree = "<group>"; };
+		62CBBCD91A9B876E005D47DF /* RTVTextValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVTextValidator.m; sourceTree = "<group>"; };
+		62CBBCDA1A9B876E005D47DF /* UITextField+RTVValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+RTVValidation.h"; sourceTree = "<group>"; };
+		62CBBCDB1A9B876E005D47DF /* UITextField+RTVValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RTVValidation.m"; sourceTree = "<group>"; };
+		62CBBCDC1A9B876E005D47DF /* UITextView+RTVValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+RTVValidation.h"; sourceTree = "<group>"; };
+		62CBBCDD1A9B876E005D47DF /* UITextView+RTVValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+RTVValidation.m"; sourceTree = "<group>"; };
 		62D87A761A915A23003FE64F /* EruTextValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EruTextValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D87A7A1A915A23003FE64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D87A7B1A915A23003FE64F /* EruTextValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EruTextValidation.h; sourceTree = "<group>"; };
@@ -95,12 +95,12 @@
 		62CBBCEC1A9B87F6005D47DF /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				62CBBCD01A9B876E005D47DF /* NSString+RUIValidation.h */,
-				62CBBCD11A9B876E005D47DF /* NSString+RUIValidation.m */,
-				62CBBCDA1A9B876E005D47DF /* UITextField+RUIValidation.h */,
-				62CBBCDB1A9B876E005D47DF /* UITextField+RUIValidation.m */,
-				62CBBCDC1A9B876E005D47DF /* UITextView+RUIValidation.h */,
-				62CBBCDD1A9B876E005D47DF /* UITextView+RUIValidation.m */,
+				62CBBCD01A9B876E005D47DF /* NSString+RTVValidation.h */,
+				62CBBCD11A9B876E005D47DF /* NSString+RTVValidation.m */,
+				62CBBCDA1A9B876E005D47DF /* UITextField+RTVValidation.h */,
+				62CBBCDB1A9B876E005D47DF /* UITextField+RTVValidation.m */,
+				62CBBCDC1A9B876E005D47DF /* UITextView+RTVValidation.h */,
+				62CBBCDD1A9B876E005D47DF /* UITextView+RTVValidation.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -108,14 +108,14 @@
 		62CBBCEE1A9B886A005D47DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				62CBBCD41A9B876E005D47DF /* RUITextValidationRule.h */,
-				62CBBCD51A9B876E005D47DF /* RUITextValidationRule.m */,
-				62CBBCD61A9B876E005D47DF /* RUITextValidationRuleCollection.h */,
-				62CBBCD71A9B876E005D47DF /* RUITextValidationRuleCollection.m */,
-				62CBBCD81A9B876E005D47DF /* RUITextValidator.h */,
-				62CBBCD91A9B876E005D47DF /* RUITextValidator.m */,
-				62CBBCD21A9B876E005D47DF /* RUIFormValidator.h */,
-				62CBBCD31A9B876E005D47DF /* RUIFormValidator.m */,
+				62CBBCD41A9B876E005D47DF /* RTVTextValidationRule.h */,
+				62CBBCD51A9B876E005D47DF /* RTVTextValidationRule.m */,
+				62CBBCD61A9B876E005D47DF /* RTVTextValidationRuleCollection.h */,
+				62CBBCD71A9B876E005D47DF /* RTVTextValidationRuleCollection.m */,
+				62CBBCD81A9B876E005D47DF /* RTVTextValidator.h */,
+				62CBBCD91A9B876E005D47DF /* RTVTextValidator.m */,
+				62CBBCD21A9B876E005D47DF /* RTVFormValidator.h */,
+				62CBBCD31A9B876E005D47DF /* RTVFormValidator.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -181,13 +181,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62CBBCE01A9B876E005D47DF /* RUIFormValidator.h in Headers */,
-				62CBBCE21A9B876E005D47DF /* RUITextValidationRule.h in Headers */,
-				62CBBCDE1A9B876E005D47DF /* NSString+RUIValidation.h in Headers */,
-				62CBBCE81A9B876E005D47DF /* UITextField+RUIValidation.h in Headers */,
-				62CBBCEA1A9B876E005D47DF /* UITextView+RUIValidation.h in Headers */,
-				62CBBCE61A9B876E005D47DF /* RUITextValidator.h in Headers */,
-				62CBBCE41A9B876E005D47DF /* RUITextValidationRuleCollection.h in Headers */,
+				62CBBCE01A9B876E005D47DF /* RTVFormValidator.h in Headers */,
+				62CBBCE21A9B876E005D47DF /* RTVTextValidationRule.h in Headers */,
+				62CBBCDE1A9B876E005D47DF /* NSString+RTVValidation.h in Headers */,
+				62CBBCE81A9B876E005D47DF /* UITextField+RTVValidation.h in Headers */,
+				62CBBCEA1A9B876E005D47DF /* UITextView+RTVValidation.h in Headers */,
+				62CBBCE61A9B876E005D47DF /* RTVTextValidator.h in Headers */,
+				62CBBCE41A9B876E005D47DF /* RTVTextValidationRuleCollection.h in Headers */,
 				62D87A7C1A915A23003FE64F /* EruTextValidation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +237,7 @@
 		62D87A6D1A915A23003FE64F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RTV;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Eru;
 				TargetAttributes = {
@@ -308,13 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62CBBCE51A9B876E005D47DF /* RUITextValidationRuleCollection.m in Sources */,
-				62CBBCE71A9B876E005D47DF /* RUITextValidator.m in Sources */,
-				62CBBCDF1A9B876E005D47DF /* NSString+RUIValidation.m in Sources */,
-				62CBBCEB1A9B876E005D47DF /* UITextView+RUIValidation.m in Sources */,
-				62CBBCE11A9B876E005D47DF /* RUIFormValidator.m in Sources */,
-				62CBBCE31A9B876E005D47DF /* RUITextValidationRule.m in Sources */,
-				62CBBCE91A9B876E005D47DF /* UITextField+RUIValidation.m in Sources */,
+				62CBBCE51A9B876E005D47DF /* RTVTextValidationRuleCollection.m in Sources */,
+				62CBBCE71A9B876E005D47DF /* RTVTextValidator.m in Sources */,
+				62CBBCDF1A9B876E005D47DF /* NSString+RTVValidation.m in Sources */,
+				62CBBCEB1A9B876E005D47DF /* UITextView+RTVValidation.m in Sources */,
+				62CBBCE11A9B876E005D47DF /* RTVFormValidator.m in Sources */,
+				62CBBCE31A9B876E005D47DF /* RTVTextValidationRule.m in Sources */,
+				62CBBCE91A9B876E005D47DF /* UITextField+RTVValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +445,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EruTextValidation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -460,7 +461,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EruTextValidation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

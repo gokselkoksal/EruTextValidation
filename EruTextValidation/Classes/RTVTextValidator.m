@@ -1,41 +1,41 @@
 //
-//  RUITextValidator.m
-//  EruUIKit
+//  RTVTextValidator.m
+//  EruTextValidation
 //
 //  Created by Göksel Köksal on 16/02/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
 //
 
-#import "RUITextValidator.h"
-#import "NSString+RUIValidation.h"
+#import "RTVTextValidator.h"
+#import "NSString+RTVValidation.h"
 
-@interface RUITextValidator ()
+@interface RTVTextValidator ()
 
 @property (assign, nonatomic, readwrite) BOOL readyToSubmit;
-@property (strong, nonatomic, readwrite) RUITextValidationRule *failedSubmitRule;
+@property (strong, nonatomic, readwrite) RTVTextValidationRule *failedSubmitRule;
 
 @end
 
-@implementation RUITextValidator
+@implementation RTVTextValidator
 
 @synthesize inputRules = _inputRules;
 @synthesize submitRules = _submitRules;
 
-- (RUITextValidationRuleCollection *)inputRules
+- (RTVTextValidationRuleCollection *)inputRules
 {
     if (!_inputRules)
     {
-        _inputRules = [[RUITextValidationRuleCollection alloc] init];
+        _inputRules = [[RTVTextValidationRuleCollection alloc] init];
     }
     
     return _inputRules;
 }
 
-- (RUITextValidationRuleCollection *)submitRules
+- (RTVTextValidationRuleCollection *)submitRules
 {
     if (!_submitRules)
     {
-        _submitRules = [[RUITextValidationRuleCollection alloc] init];
+        _submitRules = [[RTVTextValidationRuleCollection alloc] init];
     }
     
     return _submitRules;
@@ -77,12 +77,12 @@
     
     if (self.inputRules)
     {
-        valid = [textToValidate rui_isEmpty] || [self.inputRules validateText:textToValidate];
+        valid = [textToValidate rtv_isEmpty] || [self.inputRules validateText:textToValidate];
     }
     
     if (self.submitRules && valid)
     {
-        RUITextValidationRule *failedRule;
+        RTVTextValidationRule *failedRule;
         self.readyToSubmit = [self.submitRules validateText:textToValidate failedRule:&failedRule];
         self.failedSubmitRule = failedRule;
     }
