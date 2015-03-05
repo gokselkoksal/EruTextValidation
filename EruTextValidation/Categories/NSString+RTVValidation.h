@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *const kRTVDefaultDecimalSeparator = @",";
+
 /**
  Category on NSString for additional validation methods.
  */
@@ -58,11 +60,6 @@
  @return YES if string is alphanumeric.
  */
 - (BOOL)rtv_isAlphanumeric;
-
-/**
- @return YES if string is empty.
- */
-- (BOOL)rtv_isEmpty;
 
 /**
  @return YES if string as a WHOLE matches given regex.

@@ -77,7 +77,7 @@
     
     if (self.inputRules)
     {
-        valid = [textToValidate rtv_isEmpty] || [self.inputRules validateText:textToValidate];
+        valid = [textToValidate length] == 0 || [self.inputRules validateText:textToValidate];
     }
     
     if (self.submitRules && valid)
