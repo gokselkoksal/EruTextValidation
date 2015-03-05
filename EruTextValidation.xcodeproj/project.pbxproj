@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		623A43571A9D37F00023CA2A /* RTVStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 623A43561A9D37F00023CA2A /* RTVStringTests.m */; };
 		62CBBCDE1A9B876E005D47DF /* NSString+RTVValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD01A9B876E005D47DF /* NSString+RTVValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62CBBCDF1A9B876E005D47DF /* NSString+RTVValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCD11A9B876E005D47DF /* NSString+RTVValidation.m */; };
 		62CBBCE01A9B876E005D47DF /* RTVFormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CBBCD21A9B876E005D47DF /* RTVFormValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,7 +38,6 @@
 		62CBBCEB1A9B876E005D47DF /* UITextView+RTVValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CBBCDD1A9B876E005D47DF /* UITextView+RTVValidation.m */; };
 		62D87A7C1A915A23003FE64F /* EruTextValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D87A7B1A915A23003FE64F /* EruTextValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62D87A821A915A23003FE64F /* EruTextValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D87A761A915A23003FE64F /* EruTextValidation.framework */; };
-		62D87A891A915A23003FE64F /* EruTextValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D87A881A915A23003FE64F /* EruTextValidationTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		623A43561A9D37F00023CA2A /* RTVStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTVStringTests.m; sourceTree = "<group>"; };
 		62CBBCD01A9B876E005D47DF /* NSString+RTVValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RTVValidation.h"; sourceTree = "<group>"; };
 		62CBBCD11A9B876E005D47DF /* NSString+RTVValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RTVValidation.m"; sourceTree = "<group>"; };
 		62CBBCD21A9B876E005D47DF /* RTVFormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTVFormValidator.h; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		62D87A7B1A915A23003FE64F /* EruTextValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EruTextValidation.h; sourceTree = "<group>"; };
 		62D87A811A915A23003FE64F /* EruTextValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EruTextValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D87A871A915A23003FE64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62D87A881A915A23003FE64F /* EruTextValidationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EruTextValidationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62AB48371A9CE0FC00BA4F8B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				623A43561A9D37F00023CA2A /* RTVStringTests.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		62CBBCEC1A9B87F6005D47DF /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +168,7 @@
 		62D87A851A915A23003FE64F /* EruTextValidationTests */ = {
 			isa = PBXGroup;
 			children = (
-				62D87A881A915A23003FE64F /* EruTextValidationTests.m */,
+				62AB48371A9CE0FC00BA4F8B /* Categories */,
 				62D87A861A915A23003FE64F /* Supporting Files */,
 			);
 			path = EruTextValidationTests;
@@ -323,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D87A891A915A23003FE64F /* EruTextValidationTests.m in Sources */,
+				623A43571A9D37F00023CA2A /* RTVStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +516,7 @@
 				62AB482D1A9CC38200BA4F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62D87A701A915A23003FE64F /* Build configuration list for PBXProject "EruTextValidation" */ = {
 			isa = XCConfigurationList;
