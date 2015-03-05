@@ -104,4 +104,9 @@ typedef BOOL(^RTVTextValidationBlock)(NSString *string);
  */
 + (instancetype)ruleForMinLength:(NSUInteger)minLength maxLength:(NSUInteger)maxLength;
 
+/**
+ @return a rule to accept only valid emails.
+ */
++ (instancetype)ruleForEmail;
+
 @end
