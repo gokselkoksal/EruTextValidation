@@ -1,5 +1,5 @@
 //
-//  NSString+RTVValidation.h
+//  NSString+ERUValidation.h
 //  EruTextValidation
 //
 //  Created by Göksel Köksal on 08/11/14.
@@ -8,81 +8,81 @@
 
 #import <UIKit/UIKit.h>
 
-static NSString *const kRTVDefaultDecimalSeparator = @",";
+static NSString *const kERUDefaultDecimalSeparator = @",";
 
 /**
  Category on NSString for additional validation methods.
  */
-@interface NSString (RTVValidation)
+@interface NSString (ERUValidation)
 
 /**
  Decimal separator used for validations.
  */
-+ (NSString *)rtv_decimalSeparator;
++ (NSString *)eru_decimalSeparator;
 
 /**
  Sets decimal separator to be used in validations.
  @param decimalSeparator Decimal separator to set.
  */
-+ (void)rtv_setDecimalSeparator:(NSString *)decimalSeparator;
++ (void)eru_setDecimalSeparator:(NSString *)decimalSeparator;
 
 /**
  @return YES if string is an unsigned integer.
  */
-- (BOOL)rtv_isUnsignedInteger;
+- (BOOL)eru_isUnsignedInteger;
 
 /**
  @return YES if string is an integer.
  */
-- (BOOL)rtv_isInteger;
+- (BOOL)eru_isInteger;
 
 /**
  @return YES if string is an unsigned integer.
  */
-- (BOOL)rtv_isUnsignedFloat;
+- (BOOL)eru_isUnsignedFloat;
 
 /**
  @return YES if string is a floating point number.
  */
-- (BOOL)rtv_isFloat;
+- (BOOL)eru_isFloat;
 
 /**
  @return YES if string is numeric.
  */
-- (BOOL)rtv_isNumeric;
+- (BOOL)eru_isNumeric;
 
 /**
  @return YES if string is an unsigned floating point number.
  */
-- (BOOL)rtv_isLetters;
+- (BOOL)eru_isLetters;
 
 /**
  @return YES if string is alphanumeric.
  */
-- (BOOL)rtv_isAlphanumeric;
+- (BOOL)eru_isAlphanumeric;
 
 /**
  @return YES if string as a WHOLE matches given regex.
  @param regex Regular expression to match.
  */
-- (BOOL)rtv_matchesRegex:(NSRegularExpression *)regex;
+- (BOOL)eru_matchesRegex:(NSRegularExpression *)regex;
 
 /**
  @return YES if string as a WHOLE matches given regex pattern. If pattern is invalid, method returns NO.
  @param regexPattern Regular expression pattern to match.
  @note NSRegularExpression will be created with NSRegularExpressionCaseInsensitive option.
  */
-- (BOOL)rtv_matchesRegexPattern:(NSString *)regexPattern;
+- (BOOL)eru_matchesRegexPattern:(NSString *)regexPattern;
 
 /**
  @return YES if string as a WHOLE matches the given character set.
  @param characterSet Character set to match.
  */
-- (BOOL)rtv_matchesCharacterSet:(NSCharacterSet *)characterSet;
+- (BOOL)eru_matchesCharacterSet:(NSCharacterSet *)characterSet;
 
 /**
  @return YES if string is a valid email address.
  */
-- (BOOL)rtv_isValidEmail;
+- (BOOL)eru_isValidEmail;
 
 @end

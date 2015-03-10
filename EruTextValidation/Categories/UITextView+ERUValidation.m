@@ -1,22 +1,22 @@
 //
-//  UITextView+RTVValidation.m
+//  UITextView+ERUValidation.m
 //  EruTextValidation
 //
 //  Created by Göksel Köksal on 19/02/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
 //
 
-#import "UITextView+RTVValidation.h"
+#import "UITextView+ERUValidation.h"
 #import <objc/runtime.h>
 
-@implementation UITextView (RTVValidation)
+@implementation UITextView (ERUValidation)
 
-- (RTVTextValidator *)validator
+- (ERUTextValidator *)validator
 {
-    RTVTextValidator *validator = [self associatedValidator];
+    ERUTextValidator *validator = [self associatedValidator];
     if (!validator)
     {
-        validator = [[RTVTextValidator alloc] init];
+        validator = [[ERUTextValidator alloc] init];
         [self setAssociatedValidator:validator];
         self.delegate = validator;
     }
@@ -24,18 +24,18 @@
     return validator;
 }
 
-- (void)setValidator:(RTVTextValidator *)validator
+- (void)setValidator:(ERUTextValidator *)validator
 {
     [self setAssociatedValidator:validator];
     self.delegate = validator;
 }
 
-- (RTVTextValidator *)associatedValidator
+- (ERUTextValidator *)associatedValidator
 {
     return objc_getAssociatedObject(self, @selector(validator));
 }
 
-- (void)setAssociatedValidator:(RTVTextValidator *)validator
+- (void)setAssociatedValidator:(ERUTextValidator *)validator
 {
     objc_setAssociatedObject(self, @selector(validator), validator, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

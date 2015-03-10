@@ -1,27 +1,27 @@
 //
-//  RTVTextFieldValidator.m
+//  ERUTextFieldValidator.m
 //  EruTextValidation
 //
 //  Created by Göksel Köksal on 07/11/14.
 //  Copyright (c) 2014 Eru. All rights reserved.
 //
 
-#import "RTVTextValidationRule.h"
-#import "NSString+RTVValidation.h"
+#import "ERUTextValidationRule.h"
+#import "NSString+ERUValidation.h"
 
-#pragma mark - RTVTextValidatorRule
+#pragma mark - ERUTextValidatorRule
 
-@implementation RTVTextValidationRule
+@implementation ERUTextValidationRule
 
 @synthesize validationBlock = _validationBlock;
 @synthesize errorMessage = _errorMessage;
 
-- (instancetype)initWithBlock:(RTVTextValidationBlock)block
+- (instancetype)initWithBlock:(ERUTextValidationBlock)block
 {
     return [self initWithBlock:block errorMessage:nil];
 }
 
-- (instancetype)initWithBlock:(RTVTextValidationBlock)block errorMessage:(NSString *)errorMessage
+- (instancetype)initWithBlock:(ERUTextValidationBlock)block errorMessage:(NSString *)errorMessage
 {
     self = [super init];
     
@@ -41,35 +41,35 @@
 
 @end
 
-#pragma mark - RTVTextValidationRule+RTVFactory
+#pragma mark - ERUTextValidationRule+ERUFactory
 
-@implementation RTVTextValidationRule (RTVFactory)
+@implementation ERUTextValidationRule (ERUFactory)
 
 + (instancetype)ruleForIntegerOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rtv_isInteger];
+        return [string eru_isInteger];
     }];
 }
 
 + (instancetype)ruleForNumericOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rtv_isNumeric];
+        return [string eru_isNumeric];
     }];
 }
 
 + (instancetype)ruleForAlphanumericOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rtv_isAlphanumeric];
+        return [string eru_isAlphanumeric];
     }];
 }
 
 + (instancetype)ruleForLettersOnly
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rtv_isLetters];
+        return [string eru_isLetters];
     }];
 }
 
@@ -98,7 +98,7 @@
 + (instancetype)ruleForEmail
 {
     return [[self alloc] initWithBlock:^BOOL(NSString *string) {
-        return [string rtv_isValidEmail];
+        return [string eru_isValidEmail];
     }];
 }
 

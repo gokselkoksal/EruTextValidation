@@ -14,56 +14,56 @@ You can validate user input as-they-type.
 
 - Make text field to accept only integers.
 ```objective-c
-[self.numericField.validator.inputRules addRule:[RUITextValidationRule ruleForIntegerOnly]];
+[self.numericField.validator.inputRules addRule:[ERUTextValidationRule ruleForIntegerOnly]];
 ```
 - Make text field to accept only alphanumeric characters.
 ```objective-c
-[self.alphanumericField.validator.inputRules addRule:[RUITextValidationRule ruleForAlphanumericOnly]];
+[self.alphanumericField.validator.inputRules addRule:[ERUTextValidationRule ruleForAlphanumericOnly]];
 ```
 
 ## Validation Before Submitting To Server/Database
 You can add rules to validate text before sending to server.
 - Don't submit unless ```idNo``` is at least 10 characters.
 ```objective-c
-[self.idNoField.validator.submitRules addRule:[[RUITextValidationRule alloc] initWithBlock:^BOOL(NSString *string) {
+[self.idNoField.validator.submitRules addRule:[[ERUTextValidationRule alloc] initWithBlock:^BOOL(NSString *string) {
     return [string length] >= 10;
 }]];
 ```
 - Don't submit unless ```email``` is not valid.
 ```objective-c
-[self.emailField.validator.submitRules addRule:[RUITextValidationRule ruleForEmail]];
+[self.emailField.validator.submitRules addRule:[ERUTextValidationRule ruleForEmail]];
 ```
 There is no point sending a pre-mature ```idNo``` or ```email``` to server afterall. Don't even enable submit button if ```readyToSubmit``` is NO.
 
 ## Validating Forms
 
-You can validate a form with multiple text fields/views easily with ```RUIFormValidator```. In your view controller, follow these steps:
-- Have a ```RUIFormValidator``` property.
+You can validate a form with multiple text fields/views easily with ```ERUFormValidator```. In your view controller, follow these steps:
+- Have a ```ERUFormValidator``` property.
 ```
-@property (strong, nonatomic) RUIFormValidator *formValidator;
+@property (strong, nonatomic) ERUFormValidator *formValidator;
 ```
 
 - In ```viewDidLoad```, initialize with text/form validators.
 ```objective-c
 // Add input rules.
-[self.idNoField.validator.inputRules.rules addRule:[RUITextValidationRule ruleForIntegerOnly]];
-[self.nameField.validator.inputRules.rules addRule:[RUITextValidationRule ruleForLettersOnly]];
+[self.idNoField.validator.inputRules.rules addRule:[ERUTextValidationRule ruleForIntegerOnly]];
+[self.nameField.validator.inputRules.rules addRule:[ERUTextValidationRule ruleForLettersOnly]];
 
 // Add submit rules.
-[self.idNoField.validator.submitRules addRule:[[RUITextValidationRule alloc] initWithBlock:^BOOL(NSString *string) {
+[self.idNoField.validator.submitRules addRule:[[ERUTextValidationRule alloc] initWithBlock:^BOOL(NSString *string) {
     return [string length] >= 10;
 }]];
-[self.emailField.validator.submitRules addRule:[RUITextValidationRule ruleForEmail]];
+[self.emailField.validator.submitRules addRule:[ERUTextValidationRule ruleForEmail]];
 
 // Initialize form validator.
-NSArray *textValidators = @[self.numericField.validator, self.alphanumericField.validator, self.idNoField.validator];
-self.formValidator = [[RUIFormValidator alloc] initWithTextValidators:textValidators];
+NSArray *textValidators = @[self.numericField.validator, self.alphanumericField.validator, self.idNoField.validator, self.emailField.validator];
+self.formValidator = [[ERUFormValidator alloc] initWithTextValidators:textValidators];
 self.formValidator.delegate = self;
 ```
 
-- Conform to ```RUIFormValidatorDelegate```.
+- Conform to ```ERUFormValidatorDelegate```.
 ```objective-c
-- (void)formValidator:(RUIFormValidator *)formValidator isReadyToSubmit:(BOOL)readyToSubmit
+- (void)formValidator:(ERUFormValidator *)formValidator isReadyToSubmit:(BOOL)readyToSubmit
 {
     // This will be called after every user input and readyToSubmit will be YES if all submitRules are validated.
     self.submitButton.enabled = readyToSubmit;

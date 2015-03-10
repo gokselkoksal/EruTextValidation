@@ -1,19 +1,19 @@
 //
-//  RTVFormValidator.m
+//  ERUFormValidator.m
 //  EruTextValidation
 //
 //  Created by Göksel Köksal on 01/01/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
 //
 
-#import "RTVFormValidator.h"
-#import "RTVTextValidator.h"
+#import "ERUFormValidator.h"
+#import "ERUTextValidator.h"
 
-@interface RTVFormValidator () <RTVTextValidatorDelegate>
+@interface ERUFormValidator () <ERUTextValidatorDelegate>
 
 @end
 
-@implementation RTVFormValidator
+@implementation ERUFormValidator
 
 #pragma mark - Lifecycle
 
@@ -24,7 +24,7 @@
     if (self)
     {
         _textValidators = textValidators;
-        [_textValidators enumerateObjectsUsingBlock:^(RTVTextValidator *textValidator, NSUInteger idx, BOOL *stop) {
+        [_textValidators enumerateObjectsUsingBlock:^(ERUTextValidator *textValidator, NSUInteger idx, BOOL *stop) {
             textValidator.delegate = self;
         }];
     }
@@ -38,7 +38,7 @@
 {
     __block BOOL readyToSubmit = YES;
     
-    [self.textValidators enumerateObjectsUsingBlock:^(RTVTextValidator *textValidator, NSUInteger index, BOOL *stop) {
+    [self.textValidators enumerateObjectsUsingBlock:^(ERUTextValidator *textValidator, NSUInteger index, BOOL *stop) {
         
         readyToSubmit = textValidator.readyToSubmit;
         
@@ -56,9 +56,9 @@
     return readyToSubmit;
 }
 
-#pragma mark - RTVTextValidatorDelegate
+#pragma mark - ERUTextValidatorDelegate
 
-- (void)textValidator:(RTVTextValidator *)textValidator isReadyToSubmit:(BOOL)readyToSubmit
+- (void)textValidator:(ERUTextValidator *)textValidator isReadyToSubmit:(BOOL)readyToSubmit
 {
     [self isReadyToSubmit];
 }

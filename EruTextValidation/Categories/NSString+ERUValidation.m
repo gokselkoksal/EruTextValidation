@@ -1,12 +1,12 @@
 //
-//  NSString+RTVValidation.h
+//  NSString+ERUValidation.h
 //  EruTextValidation
 //
 //  Created by Göksel Köksal on 08/11/14.
 //  Copyright (c) 2014 Eru. All rights reserved.
 //
 
-#import "NSString+RTVValidation.h"
+#import "NSString+ERUValidation.h"
 
 static NSString *const kMinusSign = @"-";
 static NSString *const kRegexInteger = @"^([0-9]*)";
@@ -22,73 +22,73 @@ static NSString *const kRegexEmail =
 
 static NSString *decimalSeparator = nil;
 
-@implementation NSString (RTVValidation)
+@implementation NSString (ERUValidation)
 
-+ (NSString *)rtv_decimalSeparator
++ (NSString *)eru_decimalSeparator
 {
     if (!decimalSeparator)
     {
-        decimalSeparator = kRTVDefaultDecimalSeparator;
+        decimalSeparator = kERUDefaultDecimalSeparator;
     }
     
     return decimalSeparator;
 }
 
-+ (void)rtv_setDecimalSeparator:(NSString *)aDecimalSeparator
++ (void)eru_setDecimalSeparator:(NSString *)aDecimalSeparator
 {
     decimalSeparator = aDecimalSeparator;
 }
 
-- (BOOL)rtv_isUnsignedInteger
+- (BOOL)eru_isUnsignedInteger
 {
-    return [self rtv_matchesRegexPattern:kRegexInteger];
+    return [self eru_matchesRegexPattern:kRegexInteger];
 }
 
-- (BOOL)rtv_isInteger
+- (BOOL)eru_isInteger
 {
-    BOOL isInteger = [self rtv_isUnsignedInteger];
+    BOOL isInteger = [self eru_isUnsignedInteger];
     
     if (!isInteger && [self hasPrefix:kMinusSign])
     {
-        isInteger = [[self substringFromIndex:1] rtv_isUnsignedInteger];
+        isInteger = [[self substringFromIndex:1] eru_isUnsignedInteger];
     }
     
     return isInteger;
 }
 
-- (BOOL)rtv_isUnsignedFloat
+- (BOOL)eru_isUnsignedFloat
 {
-    return [self rtv_matchesRegexPattern:[[self class] regexForFloat]];
+    return [self eru_matchesRegexPattern:[[self class] regexForFloat]];
 }
 
-- (BOOL)rtv_isFloat
+- (BOOL)eru_isFloat
 {
-    BOOL isFloat = [self rtv_isUnsignedFloat];
+    BOOL isFloat = [self eru_isUnsignedFloat];
     
     if (!isFloat && [self hasPrefix:kMinusSign])
     {
-        isFloat = [[self substringFromIndex:1] rtv_isUnsignedFloat];
+        isFloat = [[self substringFromIndex:1] eru_isUnsignedFloat];
     }
     
     return isFloat;
 }
 
-- (BOOL)rtv_isNumeric
+- (BOOL)eru_isNumeric
 {
-    return [self rtv_isInteger] || [self rtv_isFloat];
+    return [self eru_isInteger] || [self eru_isFloat];
 }
 
-- (BOOL)rtv_isAlphanumeric
+- (BOOL)eru_isAlphanumeric
 {
-    return [self rtv_matchesCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
+    return [self eru_matchesCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
 }
 
-- (BOOL)rtv_isLetters
+- (BOOL)eru_isLetters
 {
-    return [self rtv_matchesCharacterSet:[NSCharacterSet letterCharacterSet]];
+    return [self eru_matchesCharacterSet:[NSCharacterSet letterCharacterSet]];
 }
 
-- (BOOL)rtv_matchesCharacterSet:(NSCharacterSet *)characterSet
+- (BOOL)eru_matchesCharacterSet:(NSCharacterSet *)characterSet
 {
     if ([self length] == 0)
     {
@@ -98,14 +98,14 @@ static NSString *decimalSeparator = nil;
     return [[self stringByTrimmingCharactersInSet:characterSet] length] == 0;
 }
 
-- (BOOL)rtv_matchesRegexPattern:(NSString *)regexPattern
+- (BOOL)eru_matchesRegexPattern:(NSString *)regexPattern
 {
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexPattern options:NSRegularExpressionCaseInsensitive error:&error];
-    return !error ? [self rtv_matchesRegex:regex] : NO;
+    return !error ? [self eru_matchesRegex:regex] : NO;
 }
 
-- (BOOL)rtv_matchesRegex:(NSRegularExpression *)regex
+- (BOOL)eru_matchesRegex:(NSRegularExpression *)regex
 {
     if ([self length] == 0)
     {
@@ -117,9 +117,9 @@ static NSString *decimalSeparator = nil;
     return matchRange.location == stringRange.location && matchRange.length == stringRange.length;
 }
 
-- (BOOL)rtv_isValidEmail
+- (BOOL)eru_isValidEmail
 {
-    return [self rtv_matchesRegexPattern:kRegexEmail];
+    return [self eru_matchesRegexPattern:kRegexEmail];
 }
 
 #pragma mark - Helpers

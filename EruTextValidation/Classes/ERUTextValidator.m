@@ -1,41 +1,41 @@
 //
-//  RTVTextValidator.m
+//  ERUTextValidator.m
 //  EruTextValidation
 //
 //  Created by Göksel Köksal on 16/02/15.
 //  Copyright (c) 2015 Eru. All rights reserved.
 //
 
-#import "RTVTextValidator.h"
-#import "NSString+RTVValidation.h"
+#import "ERUTextValidator.h"
+#import "NSString+ERUValidation.h"
 
-@interface RTVTextValidator ()
+@interface ERUTextValidator ()
 
 @property (assign, nonatomic, readwrite) BOOL readyToSubmit;
-@property (strong, nonatomic, readwrite) RTVTextValidationRule *failedSubmitRule;
+@property (strong, nonatomic, readwrite) ERUTextValidationRule *failedSubmitRule;
 
 @end
 
-@implementation RTVTextValidator
+@implementation ERUTextValidator
 
 @synthesize inputRules = _inputRules;
 @synthesize submitRules = _submitRules;
 
-- (RTVTextValidationRuleCollection *)inputRules
+- (ERUTextValidationRuleCollection *)inputRules
 {
     if (!_inputRules)
     {
-        _inputRules = [[RTVTextValidationRuleCollection alloc] init];
+        _inputRules = [[ERUTextValidationRuleCollection alloc] init];
     }
     
     return _inputRules;
 }
 
-- (RTVTextValidationRuleCollection *)submitRules
+- (ERUTextValidationRuleCollection *)submitRules
 {
     if (!_submitRules)
     {
-        _submitRules = [[RTVTextValidationRuleCollection alloc] init];
+        _submitRules = [[ERUTextValidationRuleCollection alloc] init];
     }
     
     return _submitRules;
@@ -82,7 +82,7 @@
     
     if (self.submitRules && valid)
     {
-        RTVTextValidationRule *failedRule;
+        ERUTextValidationRule *failedRule;
         self.readyToSubmit = [self.submitRules validateText:textToValidate failedRule:&failedRule];
         self.failedSubmitRule = failedRule;
     }

@@ -6,22 +6,22 @@
 //  Copyright (c) 2014 Eru. All rights reserved.
 //
 
-#import "NSString+RTVValidation.h"
+#import "NSString+ERUValidation.h"
 
 /**
  Validation block to be used when validating text.
  */
-typedef BOOL(^RTVTextValidationBlock)(NSString *string);
+typedef BOOL(^ERUTextValidationBlock)(NSString *string);
 
 /**
  Protocol to be adopted when defining text validation rules.
  */
-@protocol RTVTextValidationRule <NSObject>
+@protocol ERUTextValidationRule <NSObject>
 
 /**
  Validation block to be used when validating text.
  */
-@property (copy, nonatomic, readonly) RTVTextValidationBlock validationBlock;
+@property (copy, nonatomic, readonly) ERUTextValidationBlock validationBlock;
 
 /**
  Error message to be displayed when validation fails for this rule.
@@ -40,20 +40,20 @@ typedef BOOL(^RTVTextValidationBlock)(NSString *string);
 /**
  Wrapper for a text validation rule.
  */
-@interface RTVTextValidationRule : NSObject <RTVTextValidationRule>
+@interface ERUTextValidationRule : NSObject <ERUTextValidationRule>
 
 /**
  @return an instance of this class.
  @param block Validation block to be used when validating text.
  */
-- (instancetype)initWithBlock:(RTVTextValidationBlock)block;
+- (instancetype)initWithBlock:(ERUTextValidationBlock)block;
 
 /**
  @return an instance of this class.
  @param block Validation block to be used when validating text.
  @param errorMessage Error message to be displayed upon failure.
  */
-- (instancetype)initWithBlock:(RTVTextValidationBlock)block
+- (instancetype)initWithBlock:(ERUTextValidationBlock)block
                  errorMessage:(NSString *)errorMessage;
 
 @end
@@ -61,7 +61,7 @@ typedef BOOL(^RTVTextValidationBlock)(NSString *string);
 /**
  Category for commonly used validation rules.
  */
-@interface RTVTextValidationRule (RTVFactory)
+@interface ERUTextValidationRule (ERUFactory)
 
 /**
  @return rule to accept only integers. (e.g 1000, 23423)
