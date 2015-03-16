@@ -4,6 +4,7 @@ This is a component for validating text easily in iOS applications. Aim is to se
 
 # Usage
 
+- Download and build the project using ```EruTextValidationBuilder``` target. This will generate the framework in repo's root directory.
 - Add ```EruTextValidation.framework``` to your project.
 - In prefix header or wherever needed, import with ```#import <EruTextValidation/EruTextValidation.h>```.
 
